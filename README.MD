@@ -27,8 +27,9 @@ Don't forget to change the name of codespace you want to do the
    ```sh
 learn how to use it.
    ```
+
 5. And thats all
-   ```sh
+   ```
 Echo You completed it.
    ```
 
