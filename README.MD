@@ -28,7 +28,9 @@ CODESPACE_NAME: example (replace example with your own Codespace name)
 To find your Codespace name, use the GitHub CLI command: gh codespace list
 
 4.**Create the .devcontainer devcontainer.json file**
+
 You can either learn how to create this file yourself or use my example devcontainer.json file.
 
 5. **You're done!**
+
 Your Minecraft server should now be hosted on GitHub Codespaces. Just remember, it will restart every 4 hours.
