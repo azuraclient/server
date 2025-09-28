@@ -16,14 +16,13 @@ This is an example of how you may give instructions on setting up your free host
    git clone https://github.com/celvirex/server.git
    ```
 
-3. create a secret variable in workfile.
+3. create a secret variable in workfile and change the codespace name.
 
-   GH_TOKEN ```sh
-Examplekey
+   ```sh
+GH_TOKEN: ${{ secrets.CODESPACE_TOKEN }}
+          CODESPACE_NAME: example   # replace with yours
    ```
-Don't forget to change the name of codespace you want to do the thing.
 
-"
 
 4. create a .devcontainer/devcontainer.json
    ```sh
