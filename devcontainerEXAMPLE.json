@@ -1,0 +1,12 @@
+#THIS I USE THIS A EXAMPLE I USE FOR THIS METHOD
+
+{
+  "name": "Minecraft Server",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+  "postStartCommand": "java -jar server.jar",
+  "customizations": {
+    "codespaces": {
+      "timeoutInMinutes": 230
+    }
+  }
+}
