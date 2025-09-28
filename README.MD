@@ -1,32 +1,34 @@
-# Minecraft Server Creation on Codespace 24h method
-I'm just hosting a mc server in GitHub Codespace because I can't afford shit. Reminder it has to restart every 4 hours because of the idle time.
-# IP for server: MCSoManyfaces.jsx.pm:63734
-- NOTE SERVER RESTARTS EVER 4 hours  and it takes a while to start 
-- No rules or admins.
+# Minecraft Server Creation on GitHub Codespace (24h Method)
 
-<!-- GETTING STARTED -->
+This method is a way to host a Minecraft server or any command every for how long on GitHub Codespaces, as I can't afford dedicated hosting. Keep in mind that the server will **restart every 4 hours** due to idle time, and it may take a while to start back up.
+
+**Server IP**: `MCSoManyfaces.jsx.pm:63734`
+
+- **Note**: Server restarts every 4 hours, and startup time may vary.
+- No rules or admins—just have fun!
+
+---
+
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your free hosting 24h. AND PLEASE GIVE FUCKING CREDITS
+Follow these instructions to set up your own free Minecraft server hosting using GitHub Codespaces. **PLEASE GIVE ME CREDITS. I FOUND THIS METHOD ALL BY MY OWN RETARDS.**
 
 ### Instructions
-```sh
-1. Clone or fork my repo
+
+1. **Clone or fork the repository**  
+   ```sh
    git clone https://github.com/celvirex/server.git
 
-3. create a secret variable in workfile and change the codespace name.
-
+2. **Add the following secret variables in your repository's** Secrets settings:
+```sh
 GH_TOKEN: ${{ secrets.CODESPACE_TOKEN }}
-          CODESPACE_NAME: example   # replace with yours
-to find your codespace name use the the github cli command 'gh codespace list' to list the codespace name
 
-
-4. create a .devcontainer/devcontainer.json
-
-learn how to use it or use my example devcontainer.json
-
-5. Thats all
+CODESPACE_NAME: example (replace example with your own Codespace name)
 ```
+To find your Codespace name, use the GitHub CLI command: gh codespace list
 
-# How does it work
-Placeholder 
+4.**Create the .devcontainer devcontainer.json file**
+You can either learn how to create this file yourself or use my example devcontainer.json file.
+
+5. **You're done!**
+Your Minecraft server should now be hosted on GitHub Codespaces. Just remember, it will restart every 4 hours.
