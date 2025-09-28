@@ -34,3 +34,5 @@ You can either learn how to create this file yourself or use my example devconta
 5. **You're done!**
 
 Your Minecraft server should now be hosted on GitHub Codespaces. Just remember, it will restart every 4 hours.
+
+*** REMEMBER TO DO NOT MODIFY THE WORKFLOW CRON JOB TO AVOID RATE LIMITING. If you know what your doing and you want it your own cron job, I suggest don't lower it too much like a 1sec or 1min.***
