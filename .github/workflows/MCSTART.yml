@@ -10,7 +10,7 @@ jobs:
       - name: Start existing Codespace
         env:
           GH_TOKEN: ${{ secrets.CODESPACE_TOKEN }}
-          CODESPACE_NAME: my-codespace-name   # replace with yours
+          CODESPACE_NAME: somanyfaces   # replace with yours
         run: |
           curl -X POST \
             -H "Authorization: token $GH_TOKEN" \
