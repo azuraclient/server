@@ -1,4 +1,6 @@
 name: Minecraft Plugin Server
+permissions:
+  contents: write
 
 on:
   workflow_dispatch:
