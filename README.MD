@@ -18,11 +18,12 @@ This is an example of how you may give instructions on setting up your free host
 
 GH_TOKEN: ${{ secrets.CODESPACE_TOKEN }}
           CODESPACE_NAME: example   # replace with yours
+to find your codespace name use the the github cli command 'gh codespace list' to list the codespace name
 
 
 4. create a .devcontainer/devcontainer.json
 learn how to use it.
 
-5. And thats all
+5. Thats all
 ```
 
