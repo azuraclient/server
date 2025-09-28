@@ -21,7 +21,9 @@ This is an example of how you may give instructions on setting up your free host
    GH_TOKEN ```sh
 Examplekey
    ```
-Don't forget to change the name of codespace you want to do the
+Don't forget to change the name of codespace you want to do the thing.
+
+"
 
 4. create a .devcontainer/devcontainer.json
    ```sh
