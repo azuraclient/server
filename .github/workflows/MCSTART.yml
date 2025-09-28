@@ -1,0 +1,38 @@
+name: Minecraft Server
+
+on:
+  workflow_dispatch:   # Trigger manually
+  push:
+    branches: [ "main" ]
+
+jobs:
+  run-mc-server:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: "temurin"
+
+      - name: Accept EULA
+        run: echo "eula=true" > eula.txt
+
+      - name: Run Minecraft server
+        run: |
+          java -Xmx2G -Xms2G -jar server.jar nogui || true
+          # keeps workflow going even after server stops
+
+      - name: Commit and push world data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add world/ || true
+          git commit -m "Save world data [skip ci]" || echo "No world changes"
+          git push origin HEAD:main
