@@ -1,7 +1,9 @@
-name: Start Codespace MC Server
+name: Keep MC Codespace Alive
 
 on:
-  workflow_dispatch:  # run manually
+  schedule:
+    - cron: "*/1 * * * *"  # every 5 minutes
+  workflow_dispatch:        # still let you run it manually
 
 jobs:
   start:
