@@ -22,8 +22,12 @@ to find your codespace name use the the github cli command 'gh codespace list' t
 
 
 4. create a .devcontainer/devcontainer.json
-learn how to use it.
+
+learn how to use it or use my example devcontainer.json
 
 5. Thats all
-```
+'''
+
+#How does it work.
+placeholder 
 
