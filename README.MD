@@ -1,6 +1,6 @@
-# Minecraft Server Creation on GitHub Codespace (24h Method)
+# GitHub Codespace auto start and keep alive.
 
-This method is a way to host a Minecraft server or any command every for how long on GitHub Codespaces, as I can't afford dedicated hosting. Keep in mind that the server will **restart every 4 hours** due to idle time, and it may take a while to start back up.
+This method is a way to host a Minecraft server or any server every for how long on GitHub Codespaces, as I can't afford dedicated hosting. Keep in mind that the server will **restart every 4 hours** due to idle time, and it may take a while to start back up.
 
 **Server IP**: `MCSoManyfaces.jsx.pm:63734`
 
@@ -33,7 +33,7 @@ You can either learn how to create this file yourself or use my example devconta
 
 5. **You're done!**
 
-Your Minecraft server should now be hosted on GitHub Codespaces. Just remember, it will restart every 4 hours.
+Your Minecraft server or server should now be hosted on GitHub Codespaces. Just remember, it will restart every 4 hours.
 
 ***REMEMBER TO DO NOT MODIFY THE WORKFLOW CRON JOB TO AVOID RATE LIMITING.***
 If you know what your doing and you want it your own cron job, I suggest don't lower it too much like a 1sec or 1min.
